@@ -1,0 +1,58 @@
+"use strict";
+
+var gulp = require('gulp'); 
+var clean = require('gulp-clean');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var filesize = require('gulp-filesize');
+var watch = require('gulp-watch');
+var rename = require('gulp-rename');
+var gutil = require('gulp-util');
+//var connect = require('gulp-connect')
+var browserSync = require('browser-sync');
+
+
+/*gulp.task('connect', function() {
+	connect.server({
+//		root: './src',
+		livereload: true
+	});
+});*/
+
+gulp.task('browser-sync', function() {
+    browserSync.init(["./*.html"], {
+        server: {
+            baseDir: "./"
+        }
+    });
+});
+
+
+gulp.task('clean', function () {  
+  return gulp.src('build', {read: false})
+    .pipe(clean());
+});
+
+gulp.task('vendor', function() {  
+  return gulp.src('vendor/*.js')
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('build'))
+	.pipe(filesize())    
+    .pipe(uglify())
+    .pipe(rename('vendor.min.js'))    
+    .pipe(gulp.dest('build'))
+	.pipe(filesize())
+    .on('error', gutil.log);
+});
+
+/*gulp.task('html', function () {
+	console.log("html");
+	gulp.src('*.html')
+    .pipe(connect.reload());
+});
+
+gulp.task('watch', function() {
+	gulp.watch('*.html', ['html']);
+});*/
+
+gulp.task('default', [/*'connect',*/ 'browser-sync' /*'vendor',*/ /*'watch'*/]);
