@@ -1,3 +1,9 @@
 h1 {
-	color: yellow;
+	/*color: blue;*/
+    width: 2rem;
+    opacity: .5;
+    filter: blur(2px);    
+    background: linear-gradient(to bottom, white, black);
+    color: color(orangered a(.5));
+  /*color: #F00A;*/
 }
