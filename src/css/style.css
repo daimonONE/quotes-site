@@ -1,9 +1,38 @@
-h1 {
-	/*color: blue;*/
-    width: 2rem;
-    opacity: .5;
-    filter: blur(2px);    
-    background: linear-gradient(to bottom, white, black);
-    color: color(orangered a(.5));
-  /*color: #F00A;*/
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
+
+.center-block {
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;    
+}
+.center-block:not(:last-child) {
+    margin-bottom: 20px;
+}    
+
+#wrap {    
+    padding: 10px;    
+    min-height: calc(100% - 100px);     /* native */
+}
+
+/*footer {
+    position: relative;
+    clear:both;
+}*/
+
+
+/*.head {
+    margin-bottom: 20px;
+}
+
+.bQuote {
+    margin-bottom: 20px;
+}
+.quotes {
+    margin-bottom: 20px;
+}*/
