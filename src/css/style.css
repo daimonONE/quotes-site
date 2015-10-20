@@ -4,26 +4,92 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    /*background: rgba(173,216,230,0.1);*/
+    background-image: url(../images/bkg.jpg);
 }
 
 .center-block {
     text-align: center;
     width: 500px;
-    margin: 0 auto;    
+    margin: 0 auto;  
+    font-size: 20px;      
 }
 .center-block:not(:last-child) {
     margin-bottom: 20px;
 }    
+
+
+
+h1, button {
+    font-family: 'Dancing Script', cursive;       
+}
+h1 {
+    font-size: 48px;
+    color: lightblue;
+    text-shadow: 3px 3px 10px lightblue; /* Параметры тени */
+}
+
+button {
+    font-size: 30px;
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    background: darkblue;
+    color: lightblue;
+    /*opacity: 0.5;*/
+    width: 150px;
+    height: 50px;
+}
+
+button:active {    
+    border: 2px lightblue;
+    border-style: inset;
+    border-top:  1px solid lightblue;
+    border-left:  1px solid lightblue;
+    /*background: rgba(0, 0, 175, 0.8);*/
+}
+button:hover {    
+    box-shadow: 3px 3px 10px lightblue;
+    background: rgba(0, 0, 175, 0.9);    
+}
+
+.footer {
+    position: relative;
+    clear:both;
+    background: darkblue;
+    color: lightblue;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid lightblue;
+    padding-top: 10px; 
+}
+a {
+    color: lightblue;
+}
+a:visited {
+    color: white;
+}
 
 #wrap {    
     padding: 10px;    
     min-height: calc(100% - 100px);     /* native */
 }
 
-/*footer {
-    position: relative;
-    clear:both;
-}*/
+#blocks {
+    background: lightblue;
+    border-radius: 15px;
+    width: 500px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    box-shadow: 7px 7px 50px lightblue;
+    padding: 50px;
+}
+
+#blockAuthor {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
 
 
 /*.head {

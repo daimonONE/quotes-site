@@ -14,14 +14,12 @@ gulp.task('connect', function() {
 var htmlPat = './src/*.html';
 var cssPat = './src/css/*.css';
 var jsPat = './src/js/*.js';
+var imagesPat = './src/images/*.*';
 
 var htmlDest = './build/';
 var cssDest = './build/css/';
 var jsDest = './build/js/';
-
-var htmlDestPat = htmlDest+'*.html';
-var cssDestPat = cssDest+'*.css';
-var jsDestPat = jsDest+'*.js';;
+var imagesDest = './build/images/';
 
 gulp.task('html', function () {
 //	console.log(  gulp.src('./src/*.html'));
@@ -51,10 +49,19 @@ gulp.task('js', function () {
     .pipe(connect.reload());
 });
 
+gulp.task('images', function () {
+//	console.log(  gulp.src('./src/*.html'));
+  gulp.src(imagesPat)
+   	.pipe(plumber())
+  	.pipe(gulp.dest(imagesDest))
+    .pipe(connect.reload());
+});
+
 gulp.task('watch', function () {
   gulp.watch([htmlPat], ['html']);
   gulp.watch([cssPat], ['css']);  
-  gulp.watch([jsPat], ['js']);    
+  gulp.watch([jsPat], ['js']);
+  gulp.watch([imagesPat], ['images']);  
 });
 
-gulp.task('default', ['connect', 'html', 'css', 'js', 'watch']);
+gulp.task('default', ['connect', 'html', 'images', 'css', 'js', 'watch']);
