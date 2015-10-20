@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Famous Quotes</title>
+    <!-- Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+   
+<<<<<<< HEAD
+    <div id="wrap">                
+        <div class="center-block">
+            <button id="bNextQuote">New Quote</button>            
+        </div>
+        <div class="center-block">
+            <button id="bTweet"></button>
+=======
+    <div id="wrap">        
+        <div class="center-block">
+            <h1>Famous Quotes</h1>            
+        </div>
+        <div class="center-block">
+            <button id="bNextQuote">New Quote</button>
+>>>>>>> Init2
+        </div>
+        <div class="center-block" id="blocks">
+            <div class="quotes" id="blockAuthor"></div>
+            <div class="quotes" id="blockQuote"></div>
+        </div>      
+</div>
+    </div>
+    
+    <footer class="footer center-block">
+        <span>Quotes are provided by:</span>
+        <br>
+        <span id="external"><a href="http://forismatic.com/" title="Powered by quotes from forismatic.com" target="_blank">forismatic.com</a></span>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
