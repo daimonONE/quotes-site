@@ -12,7 +12,7 @@ html, body {
     text-align: center;
     width: 500px;
     margin: 0 auto;  
-    font-size: 20px;      
+    font-size: 20px;
 }
 .center-block:not(:last-child) {
     margin-bottom: 20px;
@@ -26,30 +26,57 @@ h1, button {
 h1 {
     font-size: 48px;
     color: lightblue;
-    text-shadow: 3px 3px 10px lightblue; /* Параметры тени */
+    text-shadow: 3px 3px 10px lightblue; /* Параметры тени */    
 }
 
 button {
-    font-size: 30px;
+    /*font-size: 30px;
     border: 2px solid darkblue;
     border-radius: 5px;
     background: darkblue;
-    color: lightblue;
-    /*opacity: 0.5;*/
+    color: lightblue;    
     width: 150px;
-    height: 50px;
+    height: 50px;   */
+    
+    background: #428BCA;
+    color: #fff;
+    /*font-family: Sans-serif;*/
+    font-size: 20px;
+    height: 60px;
+    width: 150px;
+    line-height: 60px;
+    margin: 25px 25px;
+    text-align: center;
+    border: 0;
+    transition: all 0.3s ease 0s;
+    opacity: 1;
 }
 
 button:active {    
-    border: 2px lightblue;
+    /*border: 2px lightblue;
     border-style: inset;
     border-top:  1px solid lightblue;
-    border-left:  1px solid lightblue;
+    border-left:  1px solid lightblue;*/
     /*background: rgba(0, 0, 175, 0.8);*/
 }
 button:hover {    
-    box-shadow: 3px 3px 10px lightblue;
-    background: rgba(0, 0, 175, 0.9);    
+    /*box-shadow: 3px 3px 10px lightblue;
+    background: rgba(0, 0, 175, 0.9);        */
+    /*background: #3071A9;*/
+     /*opacity: 0.75;*/
+     box-shadow: inset 0 0 0 2px #3071A9;
+}
+
+#bTweet {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 400px;
+    right: 10px;
+    top: 220px;    
+    background-position: center;
+    background-image: url(../images/Twitter_logo_white.png);
+    background-size: 100% 100%;
 }
 
 .footer {
@@ -61,6 +88,7 @@ button:hover {
     height: 100%;
     border-top: 2px solid lightblue;
     padding-top: 10px; 
+    
 }
 a {
     color: lightblue;
@@ -81,7 +109,7 @@ a:visited {
     border-bottom: 1px solid white;
     border-right: 1px solid white;
     box-shadow: 7px 7px 50px lightblue;
-    padding: 50px;
+    padding: 50px;    
 }
 
 #blockAuthor {

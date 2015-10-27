@@ -11,6 +11,7 @@ $(document).ready(function () {
     var blockQuote = $("#blockQuote");
     var blockAuthor = $("#blockAuthor");
     var bNextQuote = $("#bNextQuote");
+    var bTweet = $("#bTweet");
 
     function setQuote(quoteData) {
         blockQuote.text('"' + quoteData.quoteText + '"');
@@ -55,4 +56,18 @@ $(document).ready(function () {
         
     });
 
+
+    bTweet.click(function() {
+        var apiUrl = 'https://twitter.com/intent/tweet/?';
+        var params = $.param({
+            text: 'test',
+            url: window.location.href,
+            hashtags: 'FamousQuote,QuoteOfTheDay'           
+        });
+        var resUrl = apiUrl + params;
+        var NWin = window.open(resUrl, '', 'height=420,width=550');
+        if (window.focus) {
+            NWin.focus();
+        }        
+    });
 });
